@@ -6,7 +6,7 @@ git clone --depth 1 https://github.com/Mateus2022/gl4es-termux.git
 
 cd gl4es-termux 
 
-cmake -DDEFAULT_ES=2 -DNOGBM=ON -DCMAKE_SYSTEM_NAME=Linux . && make -j8 install
+cmake -DDEFAULT_ES=2 -DNO_GBM=ON -DCMAKE_SYSTEM_NAME=Linux . && make -j8 install
 
 using:
 | Environment Variable | Behavior |
