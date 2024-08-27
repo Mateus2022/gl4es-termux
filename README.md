@@ -1,7 +1,7 @@
 gl4es for works on termux ( bugs not stable )
 
 compilling: 
-apt install git cmake mesa-demos make build-essential clang llvm
+apt install git cmake mesa-demos make build-essential clang llvm -y &&
 git clone --depth 1 https://github.com/Mateus2022/gl4es-termux.git
 
 cd gl4es-termux 
