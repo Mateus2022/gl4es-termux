@@ -6,7 +6,7 @@ git clone --depth 1 https://github.com/Mateus2022/gl4es-termux.git
 
 cd gl4es-termux 
 
-cmake -DDEFAULT_ES=2 -DNO_GBM=ON -DCMAKE_SYSTEM_NAME=Linux . && make -j8 install
+cmake -DDEFAULT_ES=2 -DNO_GBM=ON -DCMAKE_SYSTEM_NAME=Linux . && make -j8 
 
 using:
 | Environment Variable | Behavior |
@@ -16,5 +16,5 @@ using:
 | `LIBGL_FB=2`         | Works but with a black screen and high/strange FPS |
 | `LIBGL_FB=3`         | Works with low FPS in `glxgears` but shows an image in X11 |
 
-enter gl4es-termux folder:
+gl4es-termux folder:
 LD_LIBRARY_PATH=lib:/system/lib64 LIBGL_FB=3 glxgears 
