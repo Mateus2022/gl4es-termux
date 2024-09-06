@@ -6,7 +6,7 @@ git clone --depth 1 https://github.com/Mateus2022/gl4es-termux.git
 
 cd gl4es-termux 
 
-cmake -DDEFAULT_ES=2 -DNO_GBM=ON -DCMAKE_SYSTEM_NAME=Linux . && make -j8 
+cmake -DDEFAULT_ES=2 -DNO_GBM=ON -DCMAKE_SYSTEM_NAME=Linux . && make -j8 && cd lib && mkdir -p $PREFIX/lib/gl4es && cp libGL.so.1 $PREFIX/lib/gl4es 
 
 using:
 | Environment Variable | Behavior |
@@ -17,4 +17,4 @@ using:
 | `LIBGL_FB=3`         | Works with low FPS in `glxgears` but shows an image in X11 |
 
 gl4es-termux folder:
-LD_LIBRARY_PATH=lib:/system/lib64 LIBGL_FB=3 glxgears 
+LD_LIBRARY_PATH=$PREFIX/lib/gl4es:/system/lib64 LIBGL_FB=3 glxgears 
